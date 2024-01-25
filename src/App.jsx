@@ -1,13 +1,11 @@
 import { Layout } from "./components/Layout/component";
-import { RestaurantsList } from "./components/RestaurantsList/component";
+import { Restaurants } from "./components/Restaurants/component";
 import "./App.scss";
 
 function App() {
     return (
         <Layout>
-            <div className="kernel">
-                <RestaurantsList />
-            </div>
+            <Restaurants />
         </Layout>
     );
 }

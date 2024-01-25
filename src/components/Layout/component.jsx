@@ -2,7 +2,7 @@ import { Header } from "../Header/component";
 import { Footer } from "../Footer/component";
 export const Layout = ({ children }) => {
     return (
-        <div>
+        <div className="kernel">
             <Header />
             {children}
             <Footer />

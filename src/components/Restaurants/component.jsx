@@ -1,8 +1,8 @@
 import styles from "./styles.module.scss";
 import { restaurants } from "../../materials/mock";
-import { RestaurantItem } from "../RestaurantItem/component";
+import { Restaurant } from "../Restaurant/component";
 
-export const RestaurantsList = () => {
+export const Restaurants = () => {
     console.log(restaurants);
     return (
         <div>
@@ -10,7 +10,7 @@ export const RestaurantsList = () => {
 
             <div className={styles.list}>
             {restaurants.map((item) => {
-                return <RestaurantItem restaurant={item} />;
+                return <Restaurant restaurant={item} />;
             })}
             </div>
         </div>
