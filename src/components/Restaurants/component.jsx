@@ -1,18 +1,27 @@
-import styles from "./styles.module.scss";
+import { useState } from "react";
 import { restaurants } from "../../materials/mock";
 import { Restaurant } from "../Restaurant/component";
+import { Button } from "../Button/component";
+import styles from "./styles.module.scss";
 
 export const Restaurants = () => {
-    console.log(restaurants);
+    const [activeRestaurantIndex, setActiveRestaurantIndex] = useState(0);
     return (
         <div>
             <h1>Список ресторанов</h1>
 
-            <div className={styles.list}>
-            {restaurants.map((item) => {
-                return <Restaurant restaurant={item} />;
-            })}
-            </div>
+            <nav className={styles.nav}>
+                {restaurants.map((restaurant, index) => (
+                    <Button
+                        onclick={() => {
+                            setActiveRestaurantIndex(index);
+                        }}
+                    >
+                        {restaurant.name}
+                    </Button>
+                ))}
+            </nav>
+            <Restaurant restaurant={restaurants[activeRestaurantIndex]} />
         </div>
     );
 };
