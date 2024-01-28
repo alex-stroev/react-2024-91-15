@@ -1,0 +1,15 @@
+.button {
+    background-color: var(--color-1);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 700;
+
+    &:disabled {
+        background-color: #e2e2e2;
+        cursor: default;
+    }
+}
