@@ -1,0 +1,23 @@
+$color: #ebebeb;
+$padd: 1em;
+.review {
+    overflow: hidden;
+    border: 1px solid $color;
+    border-radius: 24px;
+    margin-bottom: 2em;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 0.4em;
+    padding: $padd;
+    background-color: $color;
+}
+
+.user {
+    margin-right: 1em;
+}
+
+.text {
+    padding: $padd;
+}
