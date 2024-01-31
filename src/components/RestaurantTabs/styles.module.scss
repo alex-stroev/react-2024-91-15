@@ -1,0 +1,13 @@
+.tab {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #ebebeb;
+    padding: 1em;
+    border-radius: 12px;
+
+    &:disabled {
+        opacity: 0.8;
+        cursor: default;
+    }
+}
