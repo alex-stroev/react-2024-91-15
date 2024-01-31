@@ -1,29 +1,8 @@
-import { useReducer } from "react";
 import styles from "./styles.module.scss";
+import { useReviewForm } from "./useReviewForm";
 export const ReviewForm = () => {
-    //
-    const initialValue = {
-        name: "",
-        text: "",
-        rating: 1,
-    };
-    //
-    const reducer = (state, { type, payload }) => {
-        switch (type) {
-            case "setName":
-                return { ...initialValue, name: payload };
-            case "setText":
-                return { ...state, text: payload };
-            case "setRating":
-                return { ...state, rating: payload };
-            default:
-                return state;
-        }
-    };
-
-    const [form, dispatch] = useReducer(reducer, initialValue);
+    const { form, dispatch } = useReviewForm();
     console.log(form);
-
     return (
         <form className={styles.form}>
             <div className={styles.row}>
