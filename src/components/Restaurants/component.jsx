@@ -3,6 +3,7 @@ import { restaurants } from "../../materials/mock";
 import { Restaurant } from "../Restaurant/component";
 import styles from "./styles.module.scss";
 import { RestaurantTabs } from "../RestaurantTabs/component";
+import { ReviewForm } from "../ReviewForm/component";
 
 export const Restaurants = () => {
     const initialActiveRestaurantID = restaurants[0].id;
@@ -11,6 +12,7 @@ export const Restaurants = () => {
     return (
         <div>
             <h1>Список ресторанов</h1>
+            <ReviewForm />
             <nav className={styles.nav}>
                 {restaurants.map((restaurant) => (
                     <RestaurantTabs
