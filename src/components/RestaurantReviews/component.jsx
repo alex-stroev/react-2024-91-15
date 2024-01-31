@@ -1,12 +1,18 @@
 import styles from "./styles.module.scss";
 import { Review } from "../Review/component";
+import { ReviewForm } from "../ReviewForm/component";
 
 export const RestaurantReviews = ({ reviews }) => {
-    return reviews ? (
-        <div className={styles.reviews}>
-            {reviews.map((review) => {
-                return <Review review={review} />;
-            })}
+    return (
+        <div>
+            {reviews ? (
+                <div className={styles.reviews}>
+                    {reviews.map((review) => {
+                        return <Review review={review} />;
+                    })}
+                </div>
+            ) : null}
+            <ReviewForm />
         </div>
-    ) : null;
+    );
 };
