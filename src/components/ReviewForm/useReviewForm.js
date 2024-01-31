@@ -22,5 +22,7 @@ const reducer = (state, { type, payload }) => {
 export const useReviewForm = () => {
     const [form, dispatch] = useReducer(reducer, initialValue);
 
-    return {form, dispatch};
+    const setValue = (type, e) => dispatch({ type: type, payload: e.target.value });
+
+    return { form, setValue };
 };
