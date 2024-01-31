@@ -8,7 +8,7 @@ export const Restaurant = ({ restaurant }) => {
         <div className={styles.restaurant}>
             <h2>{restaurant.name}</h2>
             <h3>Меню:</h3>
-            <RestaurantMenu menu={restaurant.menu} />
+            <RestaurantMenu menu={restaurant.menu} className={"grid"} />
             <h3>Отзывы:</h3>
             <RestaurantReviews reviews={restaurant.reviews} />
         </div>

@@ -11,6 +11,12 @@
     margin-bottom: 0.25em;
 }
 
+.counter {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
 .name {
     font-weight: bold;
     margin-right: 0.5em;
@@ -18,11 +24,13 @@
 
 .price {
     font-weight: bold;
-    color: goldenrod;
+    color: var(--color-1);
 }
 
 .ingredients {
+    margin-top: 0.5em;
     display: flex;
+    flex-wrap: wrap;
 
     & > div {
         margin-right: 1em;
