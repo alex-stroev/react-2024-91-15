@@ -8,8 +8,8 @@ const initialValue = {
 
 const reducer = (state, { type, payload }) => {
     switch (type) {
-        case "setName":
-            return { ...initialValue, name: payload };
+        // case "setName":
+        //     return { ...initialValue, name: payload };
         case "setText":
             return { ...state, text: payload };
         case "setRating":
@@ -24,9 +24,9 @@ export const useReviewForm = () => {
 
     const setValue = useCallback((type, e) => dispatch({ type: type, payload: e.target.value }), []);
 
-    const setName = useCallback((e) => setValue("setName", e), [setValue]);
+    // const setName = useCallback((e) => setValue("setName", e), [setValue]);
     const setText = useCallback((e) => setValue("setText", e), [setValue]);
     const setRating = useCallback((e) => setValue("setRating", e), [setValue]);
 
-    return { form, setName, setText, setRating };
+    return { form, setText, setRating };
 };
