@@ -22,13 +22,11 @@ const reducer = (state, { type, payload }) => {
 export const useReviewForm = () => {
     const [form, dispatch] = useReducer(reducer, initialValue);
 
-    // А вот так вот с оберткой можно сделать? Вычисления выводим в setValue? Или тогда мемоизация теряет смысл?
+    const setValue = useCallback((type, e) => dispatch({ type: type, payload: e.target.value }), []);
 
-    const setValue = (type, e) => dispatch({ type: type, payload: e.target.value });
-
-    const setName = useCallback((e) => setValue("setName", e), []);
-    const setText = useCallback((e) => setValue("setText", e), []);
-    const setRating = useCallback((e) => setValue("setRating", e), []);
+    const setName = useCallback((e) => setValue("setName", e), [setValue]);
+    const setText = useCallback((e) => setValue("setText", e), [setValue]);
+    const setRating = useCallback((e) => setValue("setRating", e), [setValue]);
 
     return { form, setName, setText, setRating };
 };
