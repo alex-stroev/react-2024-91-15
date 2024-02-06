@@ -8,5 +8,5 @@ export const store = configureStore({
     reducer: combineSlices(restaurantSlice, userSlice, dishSlice, reviewSlice),
 });
 
-// console.log(JSON.stringify(store.getState(), null, 2));
-console.log(store.getState());
+
+// console.log(store.getState());
