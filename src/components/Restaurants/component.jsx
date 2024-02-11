@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 import { RestaurantTabs } from "../RestaurantTabs/component";
 import { useSelector } from "react-redux";
 import { selectRestaurantIds } from "../../redux/entities/restaurant/selectors";
+import { CartButtonContainer } from "../CartButton/container";
 
 export const Restaurants = () => {
     const [activeRestaurantId, setActiveRestaurantId] = useState();
@@ -12,6 +13,7 @@ export const Restaurants = () => {
     return (
         <div>
             <h1>Список ресторанов</h1>
+            <CartButtonContainer />
             <nav className={styles.nav}>
                 {restaurantsIDs.map((restaurantId) => (
                     <RestaurantTabs isCurrent={restaurantId === activeRestaurantId} onSelect={setActiveRestaurantId} restaurantId={restaurantId} />
