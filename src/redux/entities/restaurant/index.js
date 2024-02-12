@@ -8,9 +8,7 @@ export const restaurantSlice = createSlice({
     initialState: entityAdapter.getInitialState(),
     extraReducers: (builder) =>
         builder
-            // .addCase(getRestaurants.pending, () => {})
             .addCase(getRestaurants.fulfilled, (state, { payload }) => {
                 entityAdapter.setAll(state, payload);
             }),
-    // .addCase(getRestaurants.rejected, () => {}),
 });
