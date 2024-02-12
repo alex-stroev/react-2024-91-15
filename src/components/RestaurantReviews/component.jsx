@@ -1,7 +1,6 @@
 import styles from "./styles.module.scss";
 import { Review } from "../Review/component";
 import { ReviewForm } from "../ReviewForm/component";
-import { selectRestaurantById } from "../../redux/entities/restaurant/selectors";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getReviews } from "../../redux/entities/review/thunks/getReviews";
